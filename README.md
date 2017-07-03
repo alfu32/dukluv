@@ -35,3 +35,16 @@ Compiling
 
 The result is `./dukluv`, a standalone binary which you can add to
 PATH or copy to e.g. `/usr/local/bin/`.
+
+Building with MinGW
+------------------------
+```
+> git clone https://github.com/creationix/dukluv.git
+> cd dukluv
+> git submodule init
+> git submodule update
+> mkdir build
+> cd build
+> cmake -G "MSYS Makefiles" ..
+```
+> mingw32-make
