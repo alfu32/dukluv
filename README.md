@@ -46,5 +46,6 @@ Building with MinGW
 > mkdir build
 > cd build
 > cmake -G "MSYS Makefiles" ..
-```
 > mingw32-make
+```
+
