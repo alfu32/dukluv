@@ -1,20 +1,26 @@
 # uv
 all functions below are js bindings to libuv C functions **uv_*** for more details please refer to [libuv documentation](http://docs.libuv.org/en/v1.x/api.html)
-### run
+## loop
+### run()
+### walk(_duv_walk_cb_:callback)
+### duv_walk_cb(data.context,data.ref)
+
+# handle
 ### close
-### shutdown
+
+# req
+### cancel
 
 ## stream
-### walk
-### cancel
-### listen
-### accept
-### read_start
-### read_stop
-### write
-### is_readable
-### is_writable
-### stream_set_blocking
+### listen(stream,backlog,onConnection)
+### accept(server,client)
+### read_start(stream,onread)
+### read_stop(stream)
+### write(stream,data,next)
+### is_readable(stream)
+### is_writable(stream)
+### stream_set_blocking(stream,isblocking)
+### shutdown(stream,next)
 
 ## timer
 >timer functions allow scheduling the execution of a function after a certain interval and optionally to repeat it after another given interval.
@@ -187,7 +193,7 @@ function rerunTimeout(uv_timer_t:thandle){
 ### update_time
 // TODO
 
-## to categorize
+## mini zip
 // TODO
 ### inflate
 // TODO
