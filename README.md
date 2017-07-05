@@ -45,7 +45,7 @@ Building with MinGW
 > git submodule update
 > mkdir build
 > cd build
-> cmake -G "MSYS Makefiles" ..
+> cmake -G "MinGW Makefiles" ..
 > mingw32-make
 ```
 
