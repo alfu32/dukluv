@@ -169,7 +169,8 @@ Set the TTY using the specified terminal mode.
 the accepted modes can be coded as follows
 ecmascript6
 ```java
-enum{ UV_TTY_MODE_NORMAL, UV_TTY_MODE_RAW, UV_TTY_MODE_IO }```
+enum{ UV_TTY_MODE_NORMAL, UV_TTY_MODE_RAW, UV_TTY_MODE_IO }
+```
 
 ecmascript5 and below
 ```js
@@ -179,7 +180,8 @@ uv.tty_mode[uv.tty_mode[0]="UV_TTY_MODE_NORMAL"]=0;
 /* Raw input mode (On Windows, ENABLE_WINDOW_INPUT is also enabled) */
 uv.tty_mode[uv.tty_mode[1]="UV_TTY_MODE_RAW"]=1;
 /* Binary-safe I/O mode for IPC (Unix-only) */
-uv.tty_mode[uv.tty_mode[2]="UV_TTY_MODE_IO"]=2;```
+uv.tty_mode[uv.tty_mode[2]="UV_TTY_MODE_IO"]=2;
+```
 
 ### tty_reset_mode()
 To be called when the program exits. Resets TTY settings to default values for the next process to take over.
