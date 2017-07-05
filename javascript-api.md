@@ -83,17 +83,17 @@ function rerunTimeout(uv_timer_t:thandle){
 tcp.h
 
 #### Server workflows
-```Server : new_tcp->(bind & listen)->server```
-```onConnection+=(getSocket->accept->readStart)```
-```socket.onReadStart+=(?data->compileResponse->socket.write)```
-```socket.onReadStart+=(!data->(shutdown & stopRead & close ) )```
+```Server : new_tcp->(bind & listen)->server
+onConnection+=(getSocket->accept->readStart)
+socket.onReadStart+=(?data->compileResponse->socket.write)
+socket.onReadStart+=(!data->(shutdown & stopRead & close ) )```
 
 #### Client Workflows
 
-```Client : new_tcp->connect```
-```onConnect+=(readStart & write)```
-```onResponse+=(?data->doSomethingWithResponse->shutdown)```
-```onResponse+=(!data->close)```
+```Client : new_tcp->connect
+onConnect+=(readStart & write)
+onResponse+=(?data->doSomethingWithResponse->shutdown)
+onResponse+=(!data->close)```
 
 // TODO
 ### new_tcp():uv_tcp_t
